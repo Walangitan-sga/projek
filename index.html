@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator warna acak</title>
+</head>
+<style> 
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #colorBox { 
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        border: 1px solid #000;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+<h1>Generator warna gabut</h1>
+<div id="colorBox"></div>
+<button onclick="changeColor()">click me</button>
+<p id="colorCode"></p>
+
+<script>
+    function changeColor(){
+        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        document.getElementById('colorBox').style.backgroundColor = randomColor;
+        document.getElementById('colorBox').textContent = randomColor;
+    }
+</script>
+</body>
+</html>
